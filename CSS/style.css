@@ -1,0 +1,593 @@
+@import url(https://fonts.google.com/specimen/Belanosima);
+@import url( https://fonts.google.com/specimen/Poppins);
+
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+body{
+    background-color: #EFF5F5;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+.contenedor{
+    width: 100%;
+    height: 100%;
+    max-width: 1920px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, auto);
+
+    grid-template-areas: 
+    "header header header header"
+    "contenido contenido contenido contenido"
+    "contenido contenido contenido contenido"
+    "contenido contenido contenido contenido"
+    "footer footer footer footer"
+    ;
+}
+
+.contenedor .header{
+    grid-area: header;
+    background-color: #181823;
+}
+
+.navegacion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin-bottom: 0px;
+    padding: 0px;
+    height: 3.75em;
+    color: white;
+    position: sticky;
+}
+
+nav a:visited{
+    color: white;
+}
+
+nav a:link{
+    color: white;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.5rem;
+    width: 6.5625rem;
+    border-style: hidden;
+    cursor: pointer;
+    background-color: #181823;
+    border-color: #181823;
+    text-shadow: 0.125rem 0.125rem 0.25rem rgb(0, 0, 0, 0.5);
+    transition: 0.5s;
+    font-weight: bold;
+    color: white;
+    border-radius: 1.25rem;
+}
+
+.menu:hover{
+    height: 2.5rem;
+    width: 6.875rem;
+    border-style: solid;
+    border-radius: 1.5625rem;
+    transition-delay: 100ms;
+    animation-delay: 200ms;
+    transition: 0.5s;
+    border-color: #00425a;
+    background-color: #00425a;
+}
+
+.contenedor .contenido{
+    display: grid;
+    grid-area: contenido;
+
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: 
+    "sec1 sec1 sec2 sec2"
+    "sec1 sec1 sec2 sec2"
+    "sec3 sec3 sec3 sec3"
+    "sec4 sec4 sec4 sec4"
+    ;
+}
+
+.banner{
+    background-image: url(../Multimedia/Image/portada.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 70vh;
+}
+
+#titulo{
+    color: black;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4.375em;
+    font-family: 'Belanosima', sans-serif;
+}
+
+h2{
+    padding: 20px;
+    margin: 0px;
+    font-size: 2.5em;
+    margin-top: 3.75rem;
+    font-family: 'Belanosima', sans-serif;
+}
+
+h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    font-size: 1.25em;
+    margin-top: 1.25rem;
+    font-family: 'Belanosima', sans-serif;
+}
+
+h4{
+    font-size: 1.25em;
+    font-family: 'Belanosima', sans-serif;
+}
+
+img{
+    width: 60%;
+    margin: 1.25em;
+}
+
+
+#sec1{
+    grid-area: sec1;
+    background-color: #EFF5F5;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    gap: 1.25em;
+    padding: 1.25em;
+    margin: 1.875em;
+}
+
+.info{
+    border: solid  #FC7300 1px;
+    border-radius: 0.625em;
+    padding: 0.625em;
+    box-shadow: 0px 0px 0.625em 0px rgba(0, 0, 0, 0.5);
+}
+
+#sec1 img{
+    border: solid #1F8A70 4px;
+    border-radius: 1.25em;
+    box-shadow: 0px 0px 0.625em 0px rgba(0, 0, 0, 0.5);
+}
+
+#sec2{
+    grid-area: sec2;
+    background-color: #EFF5F5;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    gap: 1.25rem;
+    padding: 1.25rem;
+}
+
+#sec2 img{
+    border: solid #1F8A70 4px;
+    border-radius: 1.25em;
+    box-shadow: 0px 0px 0.625em 0px rgba(0, 0, 0, 0.5);
+}
+
+#sec3{
+    grid-area: sec3;
+}
+
+.item{
+    color: black;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    border: 0px;
+    margin-bottom: 3.125em;
+    text-align: end;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, auto);
+    grid-template-areas: 
+    "gridcard1 gridcard2 gridcard3 gridcard4"
+    ;
+}
+
+.card{
+    justify-content: center;
+    flex-direction: column;
+    margin: 2.5rem;
+    width: 12.5rem;
+    height: 12.5rem;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 0.625em 0px #00425A;
+    transition: 0.5s;
+    cursor: pointer;
+    color: black;
+    font-weight: bolder;
+}
+
+.card:hover{
+    scale: 1.05;
+    transition: 0.5s;
+    box-shadow: none;
+}
+
+.gridcard1{
+    grid-area: gridcard1;
+}
+.gridcard2{
+    grid-area: gridcard2;
+}
+.gridcard3{
+    grid-area: gridcard3;
+}
+.gridcard4{
+    grid-area: gridcard4;
+}
+.grid-title{
+    padding-bottom: 50px;
+}
+
+#sec4{
+    grid-area: sec4;
+    margin: 2.5em;
+    height: 100%;
+    gap: 0.625em;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+    "ultim ultim ultim ultim"
+    "a a b d"
+    "c c c d"
+    ;
+}
+
+.grid-item{
+    border: 2px solid #FC7300;
+    border-radius: 0.9375em;
+    padding: 1.25em;
+    text-align: center;
+}
+
+.ultim{
+    grid-area: ultim;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.a{
+    grid-area: a;
+}
+
+.b{
+    grid-area: b;
+}
+
+.c{
+    grid-area: c;
+}
+
+.d{
+    grid-area: d;
+}
+
+.contenedor .footer{
+    grid-area: footer;
+    background-color: #181823;
+    color: white;
+    margin: 0px;
+    margin-top: 6.25rem;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, auto);
+    grid-template-areas:
+    "redes mid mid contacto"
+    ;
+}
+
+.grid{
+    padding: 1.25em;
+}
+
+.redes{
+    grid-area: redes;
+    list-style: none;
+}
+
+.mid{
+    grid-area: mid;
+    text-align: center;
+}
+
+.contacto{
+    grid-area: contacto;
+    list-style: none;
+    text-align: center;
+}
+
+
+.icono{
+    width: 1.875em;
+    height: 1.875em;
+}
+
+li{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.contact_form{
+	width: 28.75em; 
+    height: auto;
+    margin: 5rem auto;
+	border-radius: 0.625em;  
+	padding-top: 1.875em;
+	padding-bottom: 1.25em;  
+    background-color: #EFF5F5; 
+    padding-left: 1.875em; 
+}
+
+
+input{
+	background-color: #EFF5F5; 
+	width: 25.5em; 
+	height: 2.5em; 
+	border-radius: 5px;  
+	border: 2px solid #00425A;
+	margin-top: 0.625em;  
+	padding-left: 0.625em;
+    margin-bottom: 1.25em; 
+}
+
+
+textarea{
+    background-color: #EFF5F5; 
+	width: 25.3125em; 
+	height: 9.375em; 
+	border-radius: 5px;  
+    border: 2px solid #00425A;
+	margin-top: 0.625em;  
+	padding-left: 0.625em;
+    margin-bottom: 1.25em; 
+    padding-top: 0.9375em; 
+}
+
+
+label{
+    display: block; 
+	float: center; 	
+}
+
+
+#enviar{
+	height: 2.8125em; 
+	padding-left: 5px;
+	padding-right: 5px; 	
+	margin-bottom: 1.25em; 
+	margin-top: 10px; 	
+	text-transform: uppercase;
+	background-color: #00425A; 
+	border: 1px solid #00425A;
+	border-radius: 10px;	
+	width: 26.25em;   
+    cursor: pointer;
+}
+
+
+button p{
+	color: #EFF5F5; 
+}
+
+
+span{
+	color: #181823; 
+}
+
+
+.aviso{
+	font-size: 0.8125em;  
+	color: #181823;  
+}
+
+
+
+
+
+
+
+
+@media (min-width: 320px){
+    .contenedor .contenido{
+        display: grid;
+        place-items: center;
+        margin: auto;
+        text-align: center;
+        grid-template-areas: 
+        "sec1 sec1 sec1 sec1"
+        "sec2 sec2 sec2 sec2"
+        "sec3 sec3 sec3 sec3"
+        "sec4 sec4 sec4 sec4"
+        ;
+    }
+    .banner{
+        height: 60vh;
+    }
+    #titulo{
+        top: 30%;
+    }
+    .item{
+        place-items: center;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: 
+        "gridcard1"
+        "gridcard2"
+        "gridcard3"
+        "gridcard4"
+        ;
+    }
+    #sec3{
+        display: grid;
+        place-items: center;
+        margin: auto;
+    }
+    #sec4{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas:
+        "ultim ultim ultim ultim"
+        "a a a a"
+        "b b b b"
+        "c c c c"
+        "d d d d"
+    }
+    .menu{
+        width: 2.5rem;
+        font-size: 8px;
+    }
+    .menu:hover{
+        width: 3rem;
+    }
+    .contenedor .footer{
+        text-align: center;
+        font-size: 8px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas:
+        "mid mid mid mid"
+        "redes redes contacto contacto"
+        ;
+    }
+    #titulo{
+        font-size: 3em;
+    }
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .menu{
+        width: 5rem;
+        font-size: 16px;
+    }
+    .menu:hover{
+        width: 5.5625rem;
+    }
+    .contenedor .footer{
+        font-size: 16px;
+}
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px){
+    .menu{
+        width: 6.5625rem;
+    }
+    .menu:hover{
+        width: 6.875rem;
+    }
+    body{
+        font-size: 18px;
+    }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    .banner{
+        height: 70vh;
+    }
+    #titulo{
+        top: 40%;
+    }
+    .item{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas: 
+        "gridcard1 gridcard2"
+        "gridcard3 gridcard4"
+        ;
+    }
+    .contenedor .footer{
+        font-size: 18px;
+    }
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .contenedor .contenido{
+        grid-template-areas: 
+        "sec1 sec1 sec2 sec2"
+        "sec1 sec1 sec2 sec2"
+        "sec3 sec3 sec3 sec3"
+        "sec4 sec4 sec4 sec4"
+    ;
+    }
+    .item{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(1, auto);
+        grid-template-areas: 
+        "gridcard1 gridcard2 gridcard3 gridcard4"
+        ;
+    }
+    body{
+        font-size: 16px;
+    }
+    #sec4{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas:
+        "ultim ultim ultim ultim"
+        "a a b d"
+        "c c c d"
+        ;
+    }
+    .contenedor .footer{
+        font-size: 16px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(1, auto);
+        grid-template-areas:
+        "redes mid mid contacto"
+        ;
+    }
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+    .item{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(1, auto);
+        grid-template-areas: 
+        "gridcard1 gridcard2 gridcard3 gridcard4"
+        ;
+    }
+}
